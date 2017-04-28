@@ -19,7 +19,7 @@ FLAGS = tf.app.flags.FLAGS
 
 # Basic model parameters.
 tf.app.flags.DEFINE_integer('batch_input_size', 128, """Number of images to process in a batch.""")
-tf.app.flags.DEFINE_string('data_input_dir', '/tmp/fer2013_data', """Path to the FER2013 data directory.""")
+tf.app.flags.DEFINE_string('data_input_dir', '.\\tmp\\fer2013_data', """Path to the FER2013 data directory.""")
 
 # Global constants describing the FER2013 data set.
 IMAGE_SIZE = fer2013_input.IMAGE_SIZE
