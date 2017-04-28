@@ -1,0 +1,258 @@
+================================================================================
+Input tree: '.\\'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013.py'
+ outputting to '.\\tf1.0\\fer2013.py'
+--------------------------------------------------------------------------------
+
+'.\\fer2013.py' Line 314
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.histogram_summary' to 'tf.summary.histogram'
+
+    Old:       tf.histogram_summary(var.op.name + '/gradients', grad)
+               ~~~~~~~~~~~~~~~~~~~~                                   
+    New:       tf.summary.histogram(var.op.name + '/gradients', grad)
+               ~~~~~~~~~~~~~~~~~~~~                                   
+
+'.\\fer2013.py' Line 309
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.histogram_summary' to 'tf.summary.histogram'
+
+    Old:     tf.histogram_summary(var.op.name, var)
+             ~~~~~~~~~~~~~~~~~~~~                   
+    New:     tf.summary.histogram(var.op.name, var)
+             ~~~~~~~~~~~~~~~~~~~~                   
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013_eval.py'
+ outputting to '.\\tf1.0\\fer2013_eval.py'
+--------------------------------------------------------------------------------
+
+'.\\fer2013_eval.py' Line 106
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.merge_all_summaries' to 'tf.summary.merge_all'
+
+    Old:     summary_op = tf.merge_all_summaries()
+                          ~~~~~~~~~~~~~~~~~~~~~~   
+    New:     summary_op = tf.summary.merge_all()
+                          ~~~~~~~~~~~~~~~~~~~~   
+
+'.\\fer2013_eval.py' Line 109
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old:     summary_writer = tf.train.SummaryWriter(FLAGS.eval_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~~                 
+    New:     summary_writer = tf.summary.FileWriter(FLAGS.eval_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~                 
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013_eval_bc.py'
+ outputting to '.\\tf1.0\\fer2013_eval_bc.py'
+--------------------------------------------------------------------------------
+
+'.\\fer2013_eval_bc.py' Line 120
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.merge_all_summaries' to 'tf.summary.merge_all'
+
+    Old:     summary_op = tf.merge_all_summaries()
+                          ~~~~~~~~~~~~~~~~~~~~~~   
+    New:     summary_op = tf.summary.merge_all()
+                          ~~~~~~~~~~~~~~~~~~~~   
+
+'.\\fer2013_eval_bc.py' Line 123
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old:     summary_writer = tf.train.SummaryWriter(FLAGS.eval_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~~                 
+    New:     summary_writer = tf.summary.FileWriter(FLAGS.eval_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~                 
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013_gpu_train.py'
+ outputting to '.\\tf1.0\\fer2013_gpu_train.py'
+--------------------------------------------------------------------------------
+
+'.\\fer2013_gpu_train.py' Line 225
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.all_variables' to 'tf.global_variables'
+
+    Old:     saver = tf.train.Saver(tf.all_variables())
+                                    ~~~~~~~~~~~~~~~~    
+    New:     saver = tf.train.Saver(tf.global_variables())
+                                    ~~~~~~~~~~~~~~~~~~~    
+
+'.\\fer2013_gpu_train.py' Line 228
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.merge_summary' to 'tf.summary.merge'
+
+    Old:     summary_op = tf.merge_summary(summaries)
+                          ~~~~~~~~~~~~~~~~            
+    New:     summary_op = tf.summary.merge(summaries)
+                          ~~~~~~~~~~~~~~~~            
+
+'.\\fer2013_gpu_train.py' Line 231
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     init = tf.initialize_all_variables()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+    New:     init = tf.global_variables_initializer()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'.\\fer2013_gpu_train.py' Line 104
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:     tf.scalar_summary(loss_name +' (raw)', l)
+             ~~~~~~~~~~~~~~~~~                         
+    New:     tf.summary.scalar(loss_name +' (raw)', l)
+             ~~~~~~~~~~~~~~~~~                         
+
+'.\\fer2013_gpu_train.py' Line 105
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:     tf.scalar_summary(loss_name, loss_averages.average(l))
+             ~~~~~~~~~~~~~~~~~                                      
+    New:     tf.summary.scalar(loss_name, loss_averages.average(l))
+             ~~~~~~~~~~~~~~~~~                                      
+
+'.\\fer2013_gpu_train.py' Line 138
+--------------------------------------------------------------------------------
+
+Added keyword 'concat_dim' to reordered function 'tf.concat'
+Added keyword 'values' to reordered function 'tf.concat'
+
+    Old:     grad = tf.concat(0, grads)
+                                        
+    New:     grad = tf.concat(axis=0, values=grads)
+                              ~~~~~   ~~~~~~~       
+
+'.\\fer2013_gpu_train.py' Line 207
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.histogram_summary' to 'tf.summary.histogram'
+
+    Old:             tf.histogram_summary(var.op.name + '/gradients', grad))
+                     ~~~~~~~~~~~~~~~~~~~~                                    
+    New:             tf.summary.histogram(var.op.name + '/gradients', grad))
+                     ~~~~~~~~~~~~~~~~~~~~                                    
+
+'.\\fer2013_gpu_train.py' Line 244
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old:     summary_writer = tf.train.SummaryWriter(FLAGS.train_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~~                  
+    New:     summary_writer = tf.summary.FileWriter(FLAGS.train_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~                  
+
+'.\\fer2013_gpu_train.py' Line 214
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.histogram_summary' to 'tf.summary.histogram'
+
+    Old:       summaries.append(tf.histogram_summary(var.op.name, var))
+                                ~~~~~~~~~~~~~~~~~~~~                    
+    New:       summaries.append(tf.summary.histogram(var.op.name, var))
+                                ~~~~~~~~~~~~~~~~~~~~                    
+
+'.\\fer2013_gpu_train.py' Line 201
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.scalar_summary' to 'tf.summary.scalar'
+
+    Old:     summaries.append(tf.scalar_summary('learning_rate', lr))
+                              ~~~~~~~~~~~~~~~~~                       
+    New:     summaries.append(tf.summary.scalar('learning_rate', lr))
+                              ~~~~~~~~~~~~~~~~~                       
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013_input.py'
+ outputting to '.\\tf1.0\\fer2013_input.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\fer2013_train.py'
+ outputting to '.\\tf1.0\\fer2013_train.py'
+--------------------------------------------------------------------------------
+
+'.\\fer2013_train.py' Line 50
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.merge_all_summaries' to 'tf.summary.merge_all'
+
+    Old:     summary_op = tf.merge_all_summaries()
+                          ~~~~~~~~~~~~~~~~~~~~~~   
+    New:     summary_op = tf.summary.merge_all()
+                          ~~~~~~~~~~~~~~~~~~~~   
+
+'.\\fer2013_train.py' Line 63
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.SummaryWriter' to 'tf.summary.FileWriter'
+
+    Old:     summary_writer = tf.train.SummaryWriter(FLAGS.train_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~~                  
+    New:     summary_writer = tf.summary.FileWriter(FLAGS.train_dir,
+                              ~~~~~~~~~~~~~~~~~~~~~                  
+
+'.\\fer2013_train.py' Line 53
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.initialize_all_variables' to 'tf.global_variables_initializer'
+
+    Old:     init = tf.initialize_all_variables()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+    New:     init = tf.global_variables_initializer()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'.\\fer2013_train.py' Line 47
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.all_variables' to 'tf.global_variables'
+
+    Old:     saver = tf.train.Saver(tf.all_variables())
+                                    ~~~~~~~~~~~~~~~~    
+    New:     saver = tf.train.Saver(tf.global_variables())
+                                    ~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\tf_upgrade.py'
+ outputting to '.\\tf1.0\\tf_upgrade.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\uint8-to-image.py'
+ outputting to '.\\tf1.0\\uint8-to-image.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\__init__.py'
+ outputting to '.\\tf1.0\\__init__.py'
+--------------------------------------------------------------------------------
+
+

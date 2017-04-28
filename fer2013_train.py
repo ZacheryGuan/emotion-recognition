@@ -44,13 +44,13 @@ def train():
     train_op = fer2013.train(loss, global_step)
 
     # Create a saver.
-    saver = tf.train.Saver(tf.all_variables())
+    saver = tf.train.Saver(tf.global_variables())
 
     # Build the summary operation based on the TF collection of Summaries.
-    summary_op = tf.merge_all_summaries()
+    summary_op = tf.summary.merge_all()
 
     # Build an initialization operation to run below.
-    init = tf.initialize_all_variables()
+    init = tf.global_variables_initializer()
 
     # Start running operations on the Graph.
     sess = tf.Session(config=tf.ConfigProto(
@@ -60,7 +60,7 @@ def train():
     # Start the queue runners.
     tf.train.start_queue_runners(sess=sess)
 
-    summary_writer = tf.train.SummaryWriter(FLAGS.train_dir,
+    summary_writer = tf.summary.FileWriter(FLAGS.train_dir,
                                             graph_def=sess.graph_def)
 
     for step in xrange(FLAGS.max_steps):
